@@ -215,7 +215,7 @@
 }
 
 /* TAB CHUNG */
-.search-tabs .tab {
+.search-tabs .tab  {
     border: none;
     padding: 10px 18px;
     margin-right: -4px;
@@ -226,6 +226,12 @@
     cursor: pointer;
     transition: all 0.25s ease;
 }
+.search-tabs .tab img {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+}
+
 
 .search-tabs .tab.active {
     color: #000;
@@ -593,7 +599,7 @@
     width: 48px;
     height: 48px;
     margin: 0 auto 12px;
-    background: #1e88e5;
+    background: #fdfdfd;
     color: #fff;
     border-radius: 50%;
     display: flex;
