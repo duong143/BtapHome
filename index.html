@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Link</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-top">
+            <div class="logo">TRAVEL<span>LINK</span></div>
+
+            <nav class="menu">
+                <a href="#">Vé máy bay</a>
+                <a href="#">Khách sạn</a>
+                <a href="#">Xe sân bay</a>
+                <a href="#">Tour</a>
+                <a href="#">Visa</a>
+                <a href="#">Combo</a>
+                <a href="#">Ưu đãi</a>
+                <a href="#">Tin tức</a>
+            </nav>
+
+            <div class="hotline"> 📞1900 2239 </div>
+
+            <div class="header-user">
+                <div class="user-avatar">
+                    <img src="images/anh1.jpg" alt="User Avatar">
+                </div>
+
+                <div class="user-info">
+                    <div class="user-name">Alexander Ulala</div>
+                    <div class="user-point">1200 điểm</div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-wrapper">
+
+                <button class="banner-btn prev">&#10094;</button>
+
+                <div class="banner-slider">
+                    <div class="banner-track">
+
+                        <div class="banner-slide">
+                            <img src="images/anh1.png" alt="">
+                        </div>
+
+                        <div class="banner-slide">
+                            <img src="images/anh1.png" alt="">
+                        </div>
+
+                        <div class="banner-slide">
+                            <img src="images/anh1.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="banner-btn next">&#10095;</button>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- tab -->
+    <section class="search-box">
+        <div class="container">
+            <div class="search-wrapper">
+
+                <div class="search-tabs">
+                    <button class="tab active flight">✈ Vé máy bay</button>
+                    <button class="tab hotel">
+                        🏨 Khách sạn
+                    </button>
+                    <button class="tab golf">
+                        ⛳ Sân Golf
+                    </button>
+                </div>
+
+                <!-- FORM chuyến bay -->
+                <div class="search-form-box flight-form">
+                    <div class="search-form">
+
+                        <div class="flight-col col-1">
+                            <div class="form-group">
+                                <label>Điểm đi</label>
+                                <input type="text" id="from" value="Hà Nội (HAN)">
+                            </div>
+
+                            <div class="swap-box">
+                                <button type="button" id="swapBtn"><img src="images/maybayyyy.png" alt=""></button>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Điểm đến</label>
+                                <input type="text" id="to" value="Hồ Chí Minh (SGN)">
+                            </div>
+                        </div>
+                        <div class="flight-col col-2">
+
+                            <div class="date-row">
+                                <div class="form-group">
+                                    <label>Ngày đi</label>
+                                    <input type="date">
+                                </div>
+                                <label class="roundtrip-inline">
+                                    <input type="checkbox" id="roundTrip" checked>
+                                    Khứ hồi
+                                </label>
+                            </div>
+
+                            <div class="form-group return-date">
+                                <label>Ngày về</label>
+                                <input type="date">
+                            </div>
+                        </div>
+                        <div class="flight-col col-3">
+
+                            <div class="form-group">
+                                <label>Hạng ghế</label>
+                                <select>
+                                    <option>Phổ thông</option>
+                                    <option>Thương gia</option>
+                                    <option>Hạng nhất</option>
+                                </select>
+                            </div>
+
+                            <div class="passenger-row">
+                                <div class="form-group small">
+                                    <label>Người lớn</label>
+                                    <select>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group small">
+                                    <label>Trẻ em</label>
+                                    <select>
+                                        <option>00</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group small">
+                                    <label>Em bé</label>
+                                    <select>
+                                        <option>00</option>
+                                        <option>01</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flight-col col-4">
+
+                            <div class="form-group">
+                                <label>Mã khuyến mãi</label>
+                                <input type="text" placeholder="Mã khuyến mãi">
+                            </div>
+
+                            <button class="btn-search">Tìm chuyến bay</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM KHÁCH SẠN -->
+                <div class="search-form-box hotel-form" style="display:none">
+                    <div class="search-form">
+
+                        <div class="form-group">
+                            <label>Địa điểm / Tên khách sạn</label>
+                            <input type="text" placeholder="VD: Đà Nẵng">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Ngày nhận phòng</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Ngày trả phòng</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Số phòng</label>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Người lớn</label>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Trẻ em</label>
+                            <select>
+                                <option>0</option>
+                                <option>1</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group star-filter">
+                            <span class="star-title">Hạng sao:</span>
+
+                            <div class="star-buttons">
+                                <button type="button" class="star-btn">2 ★</button>
+                                <button type="button" class="star-btn">3 ★</button>
+                                <button type="button" class="star-btn">4 ★</button>
+                                <button type="button" class="star-btn">5 ★</button>
+                            </div>
+                        </div>
+                        <button class="btn-search">
+                            Tìm khách sạn
+                        </button>
+                    </div>
+                </div>
+                <!-- FORM SÂN GOLF -->
+                <div class="search-form-box golf-form" style="display:none">
+                    <div class="search-form">
+                        <div class="form-group">
+                            <label>Tên sân golf</label>
+                            <input type="text" placeholder="VD: BRG Kings Island Golf">
+                        </div>
+                        <div class="form-group">
+                            <label>Ngày chơi</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>Số người chơi</label>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                        <button class="btn-search">
+                            Tìm sân golf
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ƯU ĐÃI -->
+    <section class="promo">
+        <div class="container">
+            <h2>Ưu đãi đặc biệt</h2>
+            <p>Chúng tôi luôn cập nhật những ưu đãi mới nhất phù hợp với bạn. Thoả sức vi vu đến các địa điểm nổi tiếng
+                khắp nơi trên thế giới.</p>
+            <div class="promo-grid">
+                <div class="promo-item">
+                    <img src="images/anh1.jpg">
+                </div>
+                <div class="promo-item">
+                    <img src="images/anh1.jpg">
+                </div>
+                <div class="promo-item">
+                    <img src="images/anh1.jpg">
+                </div>
+                <div class="promo-item">
+                    <img src="images/anh1.jpg">
+                </div>
+                <div class="promo-item">
+                    <img src="images/anh1.jpg">
+                </div>
+                <div class="promo-item">
+                    <img src="images/anh1.jpg">
+                </div>
+                <div class="promo-item">
+                    <img src="images/anh1.jpg">
+                </div>
+                <div class="promo-item">
+                    <img src="images/anh1.jpg">
+                </div>
+                <div class="promo-btn-wrap">
+                    <button class="btn-promo">Xem tất cả</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO STRIP -->
+    <section class="info-strip">
+        <div class="container">
+            <div class="info-grid">
+
+                <div class="info-item">
+                    <div class="info-icon">🕒</div>
+                    <h4>Chăm sóc nhiệt tình 24/7</h4>
+                    <p>
+                        Đội ngũ hỗ trợ luôn sẵn sàng giúp bạn mọi lúc,
+                        đảm bảo trải nghiệm đặt dịch vụ thuận tiện nhất.
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">🏷️</div>
+                    <h4>Ưu đãi lớn với Mobifone</h4>
+                    <p>
+                        Nhiều chương trình khuyến mãi hấp dẫn dành riêng
+                        cho khách hàng Mobifone.
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">🏷️</div>
+                    <h4>Giá rẻ mỗi ngày</h4>
+                    <p>
+                        Cập nhật giá tốt liên tục giúp bạn tiết kiệm
+                        tối đa chi phí cho chuyến đi.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TIN TỨC -->
+    <section class="news">
+        <div class="container">
+            <h2>Tin tức du lịch</h2>
+
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="images/anh1.jpg">
+                    <p>Khám phá địa điểm du lịch mới</p>
+                </div>
+                <div class="news-item">
+                    <img src="images/anh1.jpg">
+                    <p>Kinh nghiệm săn vé giá rẻ</p>
+                </div>
+                <div class="news-item">
+                    <img src="images/anh1.jpg">
+                    <p>Top resort đẹp nhất 2025</p>
+                </div>
+                <div class="news-btn-wrap">
+                    <button class="btn-news">Xem tất cả</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FLASH SALE BANNER -->
+    <section class="flash-sale">
+        <div class="container">
+            <div class="flash-sale-banner">
+                <img src="images/anh1.png" alt="Flash Sale">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-top">
+
+            <div class="footer-col">
+                <h4>Về Travel Link</h4>
+                <p>Giới thiệu</p>
+                <p>Tin tức</p>
+                <p>Điều khoản dịch vụ</p>
+                <p>Tuyển dụng</p>
+            </div>
+            <div class="footer-col">
+                <h4>Dịch vụ liên kết</h4>
+                <p>Travel Go - Đặt xe sân bay</p>
+                <p>Travel Hotel - Đặt phòng khách sạn</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hướng dẫn & Chính sách</h4>
+                <p>Chính sách bảo mật</p>
+                <p>Chính sách hoàn vé</p>
+                <p>Hướng dẫn đặt vé</p>
+                <p>Hướng dẫn đổi vé & thanh toán</p>
+            </div>
+            <div class="footer-col">
+                <h4>Đăng ký nhận thông tin ưu đãi</h4>
+
+                <div class="footer-subscribe">
+                    <input type="email" placeholder="Email của bạn">
+                    <button>➤</button>
+                </div>
+
+                <h4 class="app-title">Tải App tại</h4>
+
+                <div class="footer-apps">
+                    <img src="images/App_Store_(iOS).png" id="appstore" alt="App Store">
+                    <img src="images/chplay.png" id="chplay" alt="Google Play">
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-info">
+            <div class="container footer-info-grid">
+
+                <div class="footer-info-col">
+                    <h4>Tổng công ty Viễn thông MobiFone</h4>
+                    <p>A: Tòa nhà MobiFone, lô VP1, P. Yên Hòa, Q. Cầu Giấy, Hà Nội</p>
+                    <p>E: cskh@travellink.vn</p>
+                    <p>T: (+84-24) 37831800</p>
+                </div>
+                <div class="footer-info-col">
+                    <p>
+                        Số Giấy chứng nhận đăng ký doanh nghiệp: 0109058713
+                    </p>
+                    <p>Ngày cấp lần đầu: 07/01/2020,</p>
+                    <p> nơi cấp: Sở Kế hoạch và Đầu tư thành phố Hà Nội.</p>
+                </div>
+                <div class="footer-info-col footer-bct">
+                    <img src="images/logo-da-dang-ky-bo-cong-thuong.webp" alt="Đã đăng ký Bộ Công Thương">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p class="footer-copy">
+                    Copyright © 2021 Travel Link
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#">
+                        <span class="icon"><img src="images/facebook.png" alt=""></span> Facebook
+                    </a>
+                    <a href="#">
+                        <span class="icon"><img src="images/instagram.jpg" alt=""></span> Instagram
+                    </a>
+                    <a href="#">
+                        <span class="icon"><img src="images/youtube.png" alt=""></span> Youtube
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="index.js" defer></script>
+</body>
+</html>
