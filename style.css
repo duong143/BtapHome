@@ -23,7 +23,7 @@
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1150px;
     width: 100%;
     margin: auto;
     padding: 0 16px;
@@ -32,13 +32,17 @@
 .header {
     background: #fff;
     border-bottom: 1px solid #eee;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
 }
 
 .header-top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 60px;
+    /* justify-content: flex-start; */
+    gap: 24px;
+    height: 110px;
 }
 
 .logo {
@@ -49,6 +53,10 @@
 
 .logo span {
     color: #ff9800;
+}
+.menu{
+    margin-left: auto;
+    margin-right: 24px;
 }
 
 .menu a {
@@ -92,6 +100,7 @@
 .hotline {
     color: red;
     font-weight: bold;
+    margin-right: 12px;
 }
 
 .header-user {
@@ -99,6 +108,7 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    margin-left: 0;
 }
 
 .user-avatar {
