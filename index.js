@@ -130,3 +130,13 @@ departInput.addEventListener('change', () => {
 });
 
 returnInput.addEventListener('change', validateDate);
+// giữ active màu khi ấn menu
+const menuLinks = document.querySelectorAll('.menu a');
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        menuLinks.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+    });
+});

@@ -1,8 +1,25 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('./fonts/FontsFree-Net-SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('./fonts/FontsFree-Net-SFProDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Segoe UI, Tahoma;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .container {
@@ -52,7 +69,6 @@
     width: 0;
     height: 2px;
     background-color: #1e88e5;
-    /* xanh nước biển */
     transition: width 0.3s ease;
 }
 
@@ -63,6 +79,15 @@
 .menu a:hover::after {
     width: 100%;
 }
+.menu a.active {
+    color: #1e88e5;
+    font-weight: 400;
+}
+
+.menu a.active::after {
+    width: 100%;
+}
+
 
 .hotline {
     color: red;
@@ -287,7 +312,7 @@
 
 .form-group label {
     font-size: 14px;
-    color: #000000;
+    color: #99A3AE;
 }
 .form-group input,
 .form-group select {
@@ -463,7 +488,7 @@
 }
 .col-3 label {
     font-size: 14px;
-    color: #000000;
+    color: #99A3AE;
 
 }
 
@@ -637,6 +662,9 @@
 .info-strip {
     background: #eaf6fb;
     padding: 40px 0;
+    max-width: 1165px;
+    margin: 0 auto ;
+    border-radius:15px ;
 }
 .info-strip .container {
     max-width: 1050px;
