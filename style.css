@@ -575,6 +575,9 @@
 
 
 /* ưu đãi*/
+.promo .container {
+    max-width: 1060px;
+}
 .promo h2 {
     display: flex;
     justify-content: center;
@@ -620,7 +623,7 @@
 
 .promo-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-top: 20px;
 }
@@ -634,6 +637,9 @@
 .info-strip {
     background: #eaf6fb;
     padding: 40px 0;
+}
+.info-strip .container {
+    max-width: 1050px;
 }
 
 .info-grid {
@@ -683,6 +689,9 @@
 /* tin */
 .news {
     margin: 40px 0;
+}
+.news .container {
+    max-width: 1060px;
 }
 
 .news h2 {
@@ -753,6 +762,9 @@
     background: #ffffff;
     border-top: 1px solid #eee;
     margin-top: 60px;
+}
+.footer  .container {
+    max-width: 1060px;
 }
 
 .footer-top {
