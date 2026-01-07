@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Segoe UI, Tahoma;
 }
 
 .container {
@@ -112,8 +112,14 @@
 
 /*BANNER */
 .banner {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+.banner-wrapper,
+.banner-slider {
     width: 100%;
-    margin: 30px 0;
+    max-width: none;
 }
 
 .banner-wrapper {
@@ -122,8 +128,8 @@
 }
 
 .banner-slider {
-    width: 100%;
-    max-width: 100%;
+    /* width: 100%;
+    max-width: 100%; */
     overflow: hidden;
     border-radius: 12px;
 }
@@ -158,37 +164,46 @@
 .banner-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    transform: translateY(-60%);
+    width: 56px;
+    height: 56px;
+    border-radius: 14px; 
     border: none;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     z-index: 10;
+    transition: all 0.25s ease;
 }
 
 .banner-btn.prev {
-    left: 16px;
+    left: 10px;
 }
 
 .banner-btn.next {
-    right: 16px;
+    
+    right: 10px;
 }
 
+.banner-btn .arrow {
+    font-size: 5px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1;
+}
 
 .banner-btn:hover {
-    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.25);
+    transform: translateY(-50%) scale(1.05);
 }
 
-.banner-btn.prev {
-    left: 16px;
+.banner-btn:active {
+    transform: translateY(-50%) scale(0.95);
 }
 
-.banner-btn.next {
-    right: 16px;
-}
 
 .search-box {
     position: relative;
@@ -198,10 +213,12 @@
 
 /* Khung tổng của 3 tab */
 .search-wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
     position: relative;
     background: #fff;
     border-radius: 12px;
-    padding: 50px 10px 20px;
+    padding: 45px 14px 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
 }
@@ -264,10 +281,14 @@
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 7px;
     min-width: 160px;
 }
 
+.form-group label {
+    font-size: 14px;
+    color: #000000;
+}
 .form-group input,
 .form-group select {
     padding: 10px;
@@ -383,16 +404,28 @@
     visibility: hidden;
     opacity: 0;
 }
-
+/* checkbox khứ hồi */
 .col-2 .return-date {
     margin-top: 5px;
 }
+.flight-col.col-2 {
+    width: 240px; 
+}
+.col-2 .date-row {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 12px;
+}
+.col-2 input[type="date"] {
+    width: 160px;
+    min-width: 0;
+    height: 40px;
+}
 
-/* checkbox khứ hồi */
 .date-row {
     display: flex;
     align-items: flex-start;
-    gap: 30px;
+    gap: 40px;
 }
 .date-row .form-group {
     display: flex;
@@ -406,7 +439,7 @@
     gap: 6px;
     font-size: 14px;
     white-space: nowrap;
-    cursor: pointer;
+    cursor: pointer;     
 }
 
 .passenger-row {
@@ -422,12 +455,14 @@
 
 .passenger-row select {
     width: 90px;
+    height: 36px;
+    font-size: 13px;
 }
 .col-3 > .form-group {
     margin-bottom: 7px;
 }
 .col-3 label {
-    font-size: 16px;
+    font-size: 14px;
     color: #000000;
 
 }
@@ -777,12 +812,13 @@
 .footer-apps {
     display: flex;
     align-items: center;
-    gap: 4px;
+    justify-content: flex-start;
+    gap: 8px;
     margin-top: 8px;
 }
 
 .footer-apps img {
-    width: 140px;
+    width: auto;
     height: 44px;
     display: block;
     object-fit: contain;
@@ -790,10 +826,16 @@
     border-radius: 12px;
     cursor: pointer;
 }
+#chplay {
+    transform: scale(1.1);
+    transform-origin: left;
+    margin-right: 0;         
+    border-radius: 50%; 
+
+}
 #appstore {
-    transform: scale(0.68);
-    transform-origin: center;
-    margin-right: -38px;
+    margin-left: 0;
+    transform: scale(0.74);
 }
 
 
